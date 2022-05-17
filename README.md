@@ -2,8 +2,10 @@
 
 What is your favorite animal?
 
-rabbit
 
+Bird
+
+rabbit
 
 I love sloths!
 
