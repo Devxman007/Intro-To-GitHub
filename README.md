@@ -3,6 +3,8 @@
 What is your favorite animal?
 
 
+I love sloths!
+
 pussy cat
 
 Girffe
@@ -20,9 +22,6 @@ Dog
 A Cat
 
 dolphin
-
-
-
 
 
 
