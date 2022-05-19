@@ -12,6 +12,7 @@ on:
      paths:
      - '**.jpg'
 
+  workflow_dispatch:
 
 
 
