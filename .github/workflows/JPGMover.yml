@@ -1,41 +1,35 @@
-
-
 name: JPG Mover
 
 
 on:
 
-  push: 
-    paths:
-    - '**.jpg'
+  push:
+    paths: 
+     - '**.jpg'
   pull_request:
-     paths:
+    paths: 
      - '**.jpg'
 
-  workflow_dispatch:
-
-
-
 jobs:
-   
   move-jpg:
-
     runs-on: ubuntu-latest
 
-
     steps:
-
       - uses: actions/checkout@v3
 
-
-      - name: Move all jpg files
-        run: mv *.jpg Images
-
-
-      - name: Commit our changes
+      - name: Check for Folder
         run: |
-         git config user.name 'Devxman007'
-         git config user.email 'achraf.oudani@gmail.com'
-         git add .
-         git commit -m "JPG  Mover Activated"
-         git push
+          if [ ! -d '/Images']
+          then
+            mkdir -p Images
+          fi
+      - name: Move .jpg file
+        run: mv *.jpg Images
+        
+      - name: Add user info and commit changes
+        run: | 
+             git config user.name 'DanielBrett'
+             git config user.email 'dbrett@brocku.ca'
+             git add .
+             git commit -m "JPG Mover Activated"
+             git push
